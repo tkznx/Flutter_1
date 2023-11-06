@@ -12,56 +12,29 @@ class myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("AliAspnani"),
-        ),
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(50),
-          children: <Widget>[
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber[600],
-              child: const Center(
-                child: Text("slam "),
+          appBar: AppBar(
+            title: const Text('Ali Aspnani'),
+          ),
+          body: Stack(
+            children: <Widget>[
+              Container(
+                color: Colors.greenAccent,
               ),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber[500],
-              child: const Center(
-                child: Text("slam "),
+              Container(
+                color: Colors.deepPurple,
+                height: 300,
+                width: 300,
               ),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber[400],
-              child: const Center(
-                child: Text("slam "),
-              ),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber[300],
-              child: const Center(
-                child: Text("slam "),
-              ),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber[200],
-              child: const Center(
-                child: Text("slam"),
-              ),
-            )
-          ],
-        ),
-      ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  color: Colors.pinkAccent,
+                  height: 150,
+                  width: 150,
+                ),
+              )
+            ],
+          )),
     );
   }
 }
